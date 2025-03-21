@@ -1,16 +1,15 @@
-def initials_generator(personsName):
+def word_separator(sentence):
 
+    new_sentence = ""
+    new_sentence = ''.join([' ' + char if char.isupper() else char for char in sentence]).strip() + '.'
+    new_sentence = new_sentence.capitalize()
 
-    personsInitials = ""
-    seperate_names = personsName.split()
-    personsInitials = ".".join([names[0] for names in seperate_names]) + '.'
-    
-    return personsInitials.strip()
+    return new_sentence.strip()
 
-personsName = input('Enter the users first, middle, and last name:')
+sentence = "StopAndSmellTheRoses"
 
-initials = initials_generator(personsName)
+new_sentence = word_separator(sentence)
 
-print(initials)
+print(new_sentence)
 
-# Program #1, Donovan Thompson 3/21/2025
+# Program #2, Donovan Thompson 3/21/2025

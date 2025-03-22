@@ -1,19 +1,15 @@
-# Program #1: Initials
-# Write a program that gets a string containing a person's first, middle, and last names, 
-# and displays their first, middle, and last initials.  
-# For example, if the user enters John William Smith, the program should display J. W. S.
+def word_separator(sentence):
 
-# Add your logic starting on line 11
+    new_sentence = ""
+    new_sentence = ''.join([' ' + char if char.isupper() else char for char in sentence]).strip() + '.'
+    new_sentence = new_sentence.capitalize()
 
-def initials_generator(personsName):
+    return new_sentence.strip()
 
-    personsInitials = ""
-    #    Add your logic here
+sentence = "StopAndSmellTheRoses"
 
-    return personsInitials.strip()
+new_sentence = word_separator(sentence)
 
-personsName = input('Enter the users first, middle, and last name')
+print(new_sentence)
 
-initials = initials_generator(personsName)
-
-print(initials)
+# Program #2, Donovan Thompson 3/21/2025
